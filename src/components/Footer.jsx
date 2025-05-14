@@ -3,8 +3,8 @@ import face from "../assets/icons/Facebook.png";
 import insta from "../assets/icons/Instagram.png";
 import twit from "../assets/icons/Twitter.png";
 import link from "../assets/icons/Linkedin.png";
-import thrive from "../assets/icons/ThriveLogo.png";
-import send from "../assets/icons/Send.png"
+import thrive from "../assets/icons/ThriveWell.png";
+import send from "../assets/icons/send.png"
 
 
 
@@ -13,12 +13,21 @@ const Footer = () => {
         <div>
             <div>
                 <img src={thrive} alt="" />
-               <div>
-               <a href=""><img src={face} alt="" /></a>
-                <a href=""><img src={insta} alt="" /></a>
-                <a href=""><img src={twit} alt="" /></a>
-                <a href=""><img src={link} alt="" /></a>
-               </div>
+                <div className="flex space-x-4">
+  <a href="#" aria-label="Facebook">
+    <img src={face} alt="Facebook icon" />
+  </a>
+  <a href="#" aria-label="Instagram">
+    <img src={insta} alt="Instagram icon" />
+  </a>
+  <a href="#" aria-label="Twitter">
+    <img src={twit} alt="Twitter icon" />
+  </a>
+  <a href="#" aria-label="LinkedIn">
+    <img src={link} alt="LinkedIn icon" />
+  </a>
+</div>
+
                <p>2025 Medical. All Rights Reserved.</p>
             </div>
 
@@ -28,7 +37,7 @@ const Footer = () => {
                 send unnecessary emails.</p>
                 <div>
                     <input type="email" name="" id="" placeholder="Enter your email" />
-                    <button type="submit"><img src={send} alt="" /></button>
+                    <button type="submit" aria-label="Send Newsletter"><img src={send} alt="" /></button>
                 </div>
             </div>
 

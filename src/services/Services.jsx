@@ -1,9 +1,9 @@
 import React from "react";
-import Container from "./Container";
+import Container from "./HealthGuideCard";
 import mobile from "../assets/icons/mobile.png";
 import book from "../assets/icons/book.png";
 import roll from "../assets/icons/roll.png";
-import screen from "../assets/icons/screenpng";
+import screen from "../assets/icons/screen.png";
 
 
 

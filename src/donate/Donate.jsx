@@ -1,20 +1,24 @@
 import React from "react";
-import Image11 from "../assets/images/image11.png";
-import Button from "../components/Buttont";
+import Navbar from "../components/Navbar";
+import Support from "./Support";
+import Tips from "./Tips";
+import Goals from "./Goals";
+import Togeth from "./Togeth";
+import Footer from "../components/Footer";
 
 
 
-const Donate = () => {
-    return(
-        <div className="" style={{backgroundImage: `{${Image11}}`}}>
-              <h2>Together, We can Save Lives</h2>
-
-              <p> We aim to reach underserved communities 
-              by funding medical programs, clinics, and essential treatments.</p>
-
-              <Button>DONATE NOW</Button>
+function Donate() {
+     return(
+        <div>
+            <Navbar />
+            <Support />
+            <Tips />
+            <Goals />
+            <Togeth />
+            <Footer />
         </div>
-    )
+     )
 }
 
 export default Donate;

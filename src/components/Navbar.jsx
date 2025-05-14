@@ -11,16 +11,18 @@ function Navbar() {
 
         <div className={`absolute md:static top-1 right-0 text-black w-48 md:w-auto py-2 md:py-0 md:flex md:space-x-6  rounded-lg md:rounded-none ${isOpen ? "block" : "hidden"} md:block`}>
           <Link to="/" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700  hover:text-white md:hover:bg-transparent">Home</Link>
-          <Link to="/admins" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">About</Link>
-          <Link to="/users" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Donation</Link>
-          <Link to="/products" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Services</Link>
-          <Link to="/cart" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Consultation</Link>
+          <Link to="/about" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">About</Link>
+          <Link to="/donate" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Donation</Link>
+          <Link to="/services" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Services</Link>
+          <Link to="/expert" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Consultation</Link>
+          <Link to="/policy" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Policy</Link>
         </div>
 
    
         <button 
           className="md:hidden ml-2 focus:outline-none" 
           onClick={() => setIsOpen(!isOpen)}
+           aria-label="Toggle Navigation"
         >
           <svg 
             className="w-8 h-8 text-black" 

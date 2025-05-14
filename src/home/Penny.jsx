@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Buttont";
+import Button from "../components/Button";
 
 
 
@@ -13,3 +13,5 @@ const Penny = () => {
         </div>
     )
 }
+
+export default Penny;

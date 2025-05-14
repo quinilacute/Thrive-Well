@@ -1,33 +1,28 @@
-import React from "react"; 
-import { Link } from "react-router-dom";
-import Nav from "../components/Navbar";
+import React from "react";
 import Button from "../components/Button";
-import logo from "../assets/images/shaba.png";
-import back1 from "../assets/images/back1.jpeg"; 
+import man from "../assets/images/man.png";
 
-function Hero() {
+const Front = () => {
   return (
-    <div 
-      className="bg-cover bg-no-repeat bg-center h-96  brightness-50 transparent-40"  
-      style={{ backgroundImage: `url(${back1})` }}
-    >
-      <div className="flex flex-row py-2">
-        <img src={logo} alt="Shaba Furnitures Logo" className="h-12 w-auto px-20 my-10"  />
-        <Nav/>
+    <div>
+      <div>
+        <div>
+          <img src={man} alt="support image" />
+          <p>We are here for you</p>
+        </div>
+        <h2>
+          Empower people living
+          with chronic illness
+          to thrive and live better
+        </h2>
+        <p>
+          Diabetes or Hypertension doesn’t have to be the end 
+          of you. You can conquer it with a little knowledge and skills.
+        </p>
       </div>
-
-      <div className="text-center mt-16">
-        <h2 className="text-3xl font-bold text-white">Shaba Dey For You</h2>
-        <p className="mt-2 text-lg  text-white ">Crafted with style, comfort and quality</p>
-      </div>
-
-      <div className="flex px-20 mt-8 justify-end">
-        <Button>
-          <Link to="/products">Shop Now</Link>
-          </Button>
-      </div>
+      <Button>Login</Button>
     </div>
   );
-}
+};
 
-export default Hero;
+export default Front;
