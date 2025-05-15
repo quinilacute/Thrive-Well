@@ -1,6 +1,32 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
 
+const UpArrow = () => (
+  <svg
+    className="w-4 h-4 text-red-600"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M18 15l-6-6-6 6" />
+  </svg>
+);
+
+const DownArrow = () => (
+  <svg
+    className="w-4 h-4 text-red-600"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+  </svg>
+);
+
 const Quest = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -13,6 +39,7 @@ const Quest = () => {
     e.preventDefault();
     if (!name || !email || !mes) {
       setError("All fields are required");
+      setSuccess(false);
       return;
     }
     setError("");
@@ -63,7 +90,9 @@ const Quest = () => {
               className="flex justify-between items-center cursor-pointer"
             >
               <h2 className="text-lg font-medium">{faq.question}</h2>
-              <span className="text-xl">{openIndex === index ? "▲" : "▼"}</span>
+              <span className="flex items-center">
+                {openIndex === index ? <UpArrow /> : <DownArrow />}
+              </span>
             </div>
             {openIndex === index && (
               <p className="mt-2 text-gray-700">{faq.answer}</p>
@@ -79,7 +108,7 @@ const Quest = () => {
           Can’t find the answer you’re looking for? Ask us below.
         </p>
 
-        <form onSubmit={handleContact} className="flex flex-col gap-4">
+        <form onSubmit={handleContact} className="flex flex-col gap-4 relative pb-12">
           <label htmlFor="name" className="font-bold">
             Name
           </label>
@@ -88,7 +117,7 @@ const Quest = () => {
             onChange={(e) => setName(e.target.value)}
             value={name}
             placeholder="Your Name"
-            className="p-2 border rounded"
+            className="p-2 border-2 border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
 
           <label htmlFor="email" className="font-bold">
@@ -99,7 +128,7 @@ const Quest = () => {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="Your Email"
-            className="p-2 border rounded"
+            className="p-2 border-2 border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
 
           <label htmlFor="message" className="font-bold">
@@ -111,13 +140,16 @@ const Quest = () => {
             value={mes}
             placeholder="Enter your question..."
             rows={5}
-            className="p-2 border rounded"
+            className="p-2 border-2 border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
           />
 
-          <Button type="submit">Send</Button>
+          {/* Button aligned bottom-right */}
+          <div className="absolute bottom-0 right-0 mb-2 mr-2">
+            <Button type="submit">Send</Button>
+          </div>
 
-          {error && <p className="text-red-500">{error}</p>}
-          {success && <p className="text-green-600">Submitted successfully!</p>}
+          {error && <p className="text-red-500 mt-4">{error}</p>}
+          {success && <p className="text-green-600 mt-4">Submitted successfully!</p>}
         </form>
       </div>
     </div>

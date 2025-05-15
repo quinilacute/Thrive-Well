@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Hero from "./Hero";
 import Avail from "./Avail";
 import Video from "./Video";
@@ -16,7 +15,6 @@ import Footer from "../components/Footer";
 function Home() {
     return(
         <div>
-            <Navbar />
             <Hero />
             <Avail />
             <Video />
@@ -25,8 +23,8 @@ function Home() {
             <Test />
             <Arti />
             <Quest />
-            <Appoint />
             <Penny />
+            <Appoint />
             <Footer />
         </div>
     )

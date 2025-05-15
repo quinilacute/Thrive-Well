@@ -1,29 +1,3 @@
-// import React from "react";
-// import vid from "../assets/images/vid.png";
-
-
-
-
-// const Video = () => {
-//     return(
-//         <div>
-           
-//          <h2>Diabetes & Hypertension What The Experts Are Saying</h2>
-//          <img src={vid} alt="" />
-//          <div>
-//                 <h3>At ThriveWell your health is our priority</h3>
-//                         <p>Stay informed with health tips and insights for
-//                              managing Diabetes and Hypertension</p>
-//          </div>
-//         </div>
-//     )
-// }
-
-
-// export default Video;
-
-
-
 import React from "react";
 import vid from "../assets/images/vid.png";
 

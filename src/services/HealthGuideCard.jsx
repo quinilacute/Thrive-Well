@@ -1,27 +1,15 @@
 import React from "react";
 
 
-// const Container = ({children}) => {
-//     return(
-//         <div className="bg-white justify-start flex flex-col text-gray-400">
-//             {children}
-//         </div>
-//     )
-// }
 
-// export default  Container;
-
-
-
-
-const HealthGuideCard = ({children}) => {
+const HealthGuideCard = ({ children }) => {
     return (
-        <div className="bg-white justify-start flex flex-col text-gray-400">
-            {children}
-        </div>
+      <div className="bg-white text-black flex flex-col items-start p-4 rounded shadow-md">
+        {/* children content */}
+        {children}
+      </div>
     );
-};
-
-
-
-export default HealthGuideCard;
+  };
+  
+  export default HealthGuideCard;
+  
