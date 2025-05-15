@@ -1,8 +1,8 @@
+
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  // Change the port number
-  server: {
-    port: 3002,
-  },
+  plugins: [react()],
+  base: '/Thrive-Well/', 
 });
