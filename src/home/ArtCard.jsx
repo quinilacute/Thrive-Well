@@ -1,20 +1,21 @@
 import React from "react";
 
 function ArtCard({ article }) {
-  const imageSrc =
-    article.image || "https://via.placeholder.com/96?text=No+Image";
+  const imageSrc = article.image || "https://via.placeholder.com/96?text=No+Image";
 
   return (
-    <div className="bg-gray-200 border border-transparent hover:border-blue-400 rounded-lg shadow-md p-4 flex flex-col space-y-3 text-black max-w-full">
-      <div className="flex items-start space-x-4">
+    <div className="bg-white border border-gray-300 hover:shadow-md rounded-xl p-4 text-black transition duration-300 flex flex-col">
+      <div className="flex items-start space-x-4 mb-3">
         <img
           src={imageSrc}
           alt={article.name}
           className="w-24 h-24 object-cover rounded-md flex-shrink-0"
         />
-        <h2 className="font-semibold text-lg self-center">{article.name}</h2>
+        <h2 className="text-lg font-semibold text-gray-800 self-center">{article.name}</h2>
       </div>
-      <p className="text-sm text-gray-700 text-left">{article.description}</p>
+      <p className="text-sm text-gray-700 line-clamp-3 text-left">
+        {article.description}
+      </p>
     </div>
   );
 }

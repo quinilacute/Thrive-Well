@@ -15,8 +15,10 @@ import Footer from "../components/Footer";
 function Home() {
     return(
         <div>
+            <div className="flex flex-col md:flex-row">
             <Hero />
             <Avail />
+            </div>
             <Video />
             <Service />
             <Pro />

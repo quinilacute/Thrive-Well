@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
 import Procard from "./Procard";
-import image4 from "../assets/images/image4.png";
+import image4 from "../assets/icons/Kidneys.png";
 
 const plans = [
   {
@@ -29,32 +29,51 @@ const services = [
 
 const Pro = () => {
   return (
-    <section className="px-14 py-12 bg-gray-50 space-y-12">
+    <section className="px-6 md:px-14 py-12 bg-gray-50 space-y-12">
       <div>
         <div className="flex flex-col items-center">
           <h3 className="text-lg font-semibold text-blue-500 mb-2">Pro Wellness</h3>
-          <h2 className="text-3xl font-bold mb-8">Pro Subscriber Services</h2>
+          <h2 className="font-bold mb-8 text-sm md:text-3xl whitespace-nowrap">
+            Pro Subscriber Services
+          </h2>
         </div>
-        <div className="grid gap-6 justify-items-center">
+
+        <div className="grid gap-4">
           {services.map((service, idx) => (
-            <div key={idx} className="flex flex-row items-center space-x-4">
-              <img src={image4} alt={service} className="w-20 h-20" />
+            <div key={idx} className="flex items-center space-x-4 px-10">
+              <img src={image4} alt={service} className="w-4 h-4" />
               <p className="text-gray-700 font-medium">{service}</p>
             </div>
           ))}
         </div>
-        <Button>Subscribe</Button>
+
+        <div className="mt-6 md:px-10">
+          <Button>Subscribe</Button>
+        </div>
       </div>
 
       <div className="flex flex-col items-center">
-        <h2 className="py-6">SUBSCRIPTION PLAN</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center w-full max-w-4xl">
+        <h2 className="py-6 text-center font-semibold text-lg">SUBSCRIPTION PLAN</h2>
+
+        <div
+          className="
+            grid 
+            grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-3 
+            gap-6 
+            w-full 
+            max-w-4xl 
+            justify-items-center
+          "
+        >
           {plans.map((plan, idx) => (
             <Procard
               key={idx}
-              className={`w-full max-w-xs ${
-                idx === 2 ? "sm:col-span-2 sm:justify-self-center" : ""
-              }`}
+              className={`
+                w-full max-w-xs 
+                ${idx === 2 ? "sm:col-span-2 sm:col-start-1 sm:justify-self-center lg:col-span-1 lg:col-start-auto" : ""}
+              `}
             >
               <div>
                 <p className="font-semibold">{plan.duration}</p>

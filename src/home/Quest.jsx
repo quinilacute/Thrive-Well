@@ -44,6 +44,8 @@ const Quest = () => {
     }
     setError("");
     setSuccess(true);
+    // Optional: clear form
+    // setName(""); setEmail(""); setMes("");
   };
 
   const toggleAnswer = (index) => {
@@ -108,48 +110,59 @@ const Quest = () => {
           Can’t find the answer you’re looking for? Ask us below.
         </p>
 
-        <form onSubmit={handleContact} className="flex flex-col gap-4 relative pb-12">
-          <label htmlFor="name" className="font-bold">
-            Name
-          </label>
-          <input
-            id="name"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
-            placeholder="Your Name"
-            className="p-2 border-2 border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
+        <form onSubmit={handleContact} className="flex flex-col gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="flex flex-col">
+              <label htmlFor="name" className="font-medium mb-1">
+                Name
+              </label>
+              <input
+                id="name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your name"
+                className="p-2 border border-gray-400 rounded-md focus:outline-none"
+              />
+            </div>
 
-          <label htmlFor="email" className="font-bold">
-            Your Email
-          </label>
-          <input
-            id="email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            placeholder="Your Email"
-            className="p-2 border-2 border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
+            <div className="flex flex-col">
+              <label htmlFor="email" className="font-medium mb-1">
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email"
+                className="p-2 border border-gray-400 rounded-md focus:outline-none"
+              />
+            </div>
+          </div>
 
-          <label htmlFor="message" className="font-bold">
-            Question
-          </label>
-          <textarea
-            id="message"
-            onChange={(e) => setMes(e.target.value)}
-            value={mes}
-            placeholder="Enter your question..."
-            rows={5}
-            className="p-2 border-2 border-blue-500 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
-          />
+          <div className="flex flex-col">
+            <label htmlFor="message" className="font-medium mb-1">
+              Your Question
+            </label>
+            <textarea
+              id="message"
+              rows="5"
+              value={mes}
+              onChange={(e) => setMes(e.target.value)}
+              placeholder="Enter your question..."
+              className="p-2 border border-gray-400 rounded-md focus:outline-none resize-none"
+            />
+          </div>
 
-          {/* Button aligned bottom-right */}
-          <div className="absolute bottom-0 right-0 mb-2 mr-2">
+          <div className="flex justify-end">
             <Button type="submit">Send</Button>
           </div>
 
-          {error && <p className="text-red-500 mt-4">{error}</p>}
-          {success && <p className="text-green-600 mt-4">Submitted successfully!</p>}
+          {error && <p className="text-red-500 text-sm">{error}</p>}
+          {success && (
+            <p className="text-green-600 text-sm">Submitted successfully!</p>
+          )}
         </form>
       </div>
     </div>

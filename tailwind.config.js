@@ -1,3 +1,4 @@
+// tailwind.config.js
 module.exports = {
   content: [
     './index.html',
@@ -6,19 +7,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
-};
-
-
-// tailwind.config.js
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Ensure your paths are correct
-  ],
-  theme: {
-    extend: {},
-  },
   plugins: [
-    require("tailwindcss-animate"),
+    require('tailwindcss-animate'),
+    require('@tailwindcss/line-clamp'),
   ],
-}
+};

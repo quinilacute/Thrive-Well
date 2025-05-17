@@ -1,12 +1,14 @@
 import React, { useState } from "react";  
 import { Link } from "react-router-dom";
+import logo from "../assets/icons/ThriveWell.png";
 
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full flex justify-end px-14 py-10  fixed"> 
+    <div className="w-full flex justify-between px-14 py-10  fixed"> 
+       <img src={logo} alt="ThriveWell Logo" className="h-6 w-auto" />
       <nav className="text-white flex items-center relative  ">
         
 

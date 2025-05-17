@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import word from "../assets/icons/word.png";
-import aaron from "../assets/images/mart.png"; // example image
-import peter from "../assets/images/mich.png"; // you need to add these images
+import aaron from "../assets/images/mart.png";
+import peter from "../assets/images/mich.png";
 import nkechi from "../assets/images/man.png";
 
 const Test = () => {
@@ -15,7 +15,7 @@ const Test = () => {
     {
       id: 1,
       name: "Aaron Adebayo",
-      image: aaron, // added image
+      image: aaron,
       test: "ThriveWell has completely changed how I manage my diabetes! The meal plans and health tracking tools keep me on track every day.",
     },
     {
@@ -33,37 +33,51 @@ const Test = () => {
   ];
 
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center">
-        <h2 className="text-3xl font-bold">
+    <div className="py-8 px-4">
+      <div className="flex flex-col items-center text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
           Our <span className="text-blue-600">Testimonials</span>
         </h2>
-        <p className="text-gray-500">Trusted Worldwide great care giving</p>
+        <p className="text-sm sm:text-base text-gray-500 mt-2">
+          Trusted Worldwide great care giving
+        </p>
 
-        <img src={word} alt="word-icon" className="py-12" />
+        {/* Word icon with blue circular background */}
+        <div className="bg-blue-600 rounded-full p-4 mt-6">
+          <img src={word} alt="word-icon" className="w-10 h-10 sm:w-12 sm:h-12" />
+        </div>
       </div>
 
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-8">
+      <div className="container mx-auto text-center mt-10">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
           What Our Customers Are Saying...
         </h2>
 
         <div className="flex flex-col items-center max-w-xl mx-auto">
-          <p className="text-gray-600 mt-2 mb-6">{testi[active].test}</p>
-          <h3 className="text-xl font-semibold mb-6">{testi[active].name}</h3>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6">
+            {testi[active].test}
+          </p>
+          <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-6">
+            {testi[active].name}
+          </h3>
 
-          <div className="flex justify-center space-x-6">
+          {/* Avatar cycles with closer spacing */}
+          <div className="flex justify-center space-x-3 sm:space-x-4 md:space-x-5">
             {testi.map((test, index) => (
-              <div key={test.id} className="cursor-pointer" onClick={() => handleClick(index)}>
+              <div
+                key={test.id}
+                className="cursor-pointer flex flex-col items-center"
+                onClick={() => handleClick(index)}
+              >
                 <img
                   src={test.image}
                   alt={test.name}
-                  className={`w-24 h-24 rounded-full object-cover border-4 transition ${
+                  className={`w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full object-cover border-4 transition ${
                     active === index ? "border-blue-600" : "border-transparent"
                   }`}
                 />
                 <div
-                  className={`w-3 h-3 rounded-full mx-auto mt-2 ${
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full mt-2 ${
                     active === index ? "bg-blue-600" : "bg-gray-300"
                   }`}
                 ></div>
