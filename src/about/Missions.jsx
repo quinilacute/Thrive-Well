@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../components/Button";
-import Image7 from "../assets/images/image 32.png";
+import mis from "../assets/images/mis.png";
 
 const Value = () => {
   const abouts = [
@@ -20,7 +20,7 @@ const Value = () => {
 
   return (
     <div className="flex flex-col items-center justify-center px-4 max-w-4xl mx-auto">
-      <img src={Image7} alt="ThriveWell Vision" className="w-full mb-8 rounded" />
+      <img src={mis} alt="ThriveWell Vision" className="w-full mb-8 rounded" />
       <div className="w-full space-y-8 text-center">
         {abouts.map((about) => (
           <div key={about.id}>

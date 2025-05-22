@@ -1,7 +1,8 @@
 import React from "react";
 import Container from "../home/Procard";
-import Icon from "../assets/icons/book.png"; // example icon import
-import Placeholder from "../assets/icons/love.png"; // example placeholder import
+import Icon from "../assets/icons/book.png"; 
+import Placeholder from "../assets/icons/love.png"; 
+import edu from "../assets/icons/edu.png";
 
 const Why = () => {
   const benefits = [
@@ -33,10 +34,12 @@ const Why = () => {
 
   return (
     <section className="max-w-5xl mx-auto p-6">
-      <h2 className="text-3xl font-semibold mb-8 text-center">Why Choose Us</h2>
+      <div className="bg-blue-400 p-2">
+      <h2 className="text-2xl font-semibold mb-8 text-center mt-6">Why Choose Us</h2>
+      </div>
 
-      <div className="flex flex-col md:flex-row md:justify-around mb-12 gap-8">
-        <article className="flex flex-col items-center text-center max-w-sm">
+      <div className="flex flex-col md:flex-row md:justify-around px-2 py-14 gap-8">
+        <article className="flex flex-col  text-center w-80 bg-blue-800 p-5 ">
           <img src={Icon} alt="Personalized Health Management Icon" className="mb-4 w-16 h-16" />
           <h3 className="text-xl font-bold mb-2">Personalized Health Management</h3>
           <p>Symptom and health tracking (e.g., blood sugar, blood pressure)</p>
@@ -45,7 +48,7 @@ const Why = () => {
           </p>
         </article>
 
-        <article className="flex flex-col items-center text-center max-w-sm">
+        <article className="flex flex-col  text-center w-80 bg-blue-800 p-5">
           <img src={Icon} alt="Educational Resources Icon" className="mb-4 w-16 h-16" />
           <h3 className="text-xl font-bold mb-2">Educational Resources & Expert Insights</h3>
           <p>Articles, guides, and videos on diabetes and hypertension</p>

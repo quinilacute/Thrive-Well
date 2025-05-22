@@ -1,13 +1,13 @@
 [
     {
       "id": 1,
-      "image": "",
+      "image": "lart.png",
       "name": "Hypertension",
       "description": "Uncontrolled high blood pressure can lead to stroke, heart failure, and kidney disease..."
     },
     {
       "id": 2,
-      "image": "",
+      "image": "dart",
       "name": "Diabetes",
       "description": "Diabetes can feel overwhelming, but small daily habits make a big difference..."
     },
@@ -19,7 +19,7 @@
     },
     {
       "id": 4,
-      "image": "",
+      "image": "eart.png",
       "name": "Emergency",
       "description": "Medical emergencies like heart attacks, strokes, and diabetic crises require immediate action..."
     },

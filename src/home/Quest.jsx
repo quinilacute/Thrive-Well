@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
+import pur from "../assets/images/pur.png";
+import white from '../assets/images/white.png';
+import red from "../assets/images/red.png";
+
 
 const UpArrow = () => (
   <svg
@@ -44,8 +48,8 @@ const Quest = () => {
     }
     setError("");
     setSuccess(true);
-    // Optional: clear form
-    // setName(""); setEmail(""); setMes("");
+    //  clear form
+    setName(""); setEmail(""); setMes("");
   };
 
   const toggleAnswer = (index) => {
@@ -77,13 +81,13 @@ const Quest = () => {
 
   return (
     <div className="max-w-2xl mx-auto p-4">
-      {/* FAQ Header */}
+  
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold">Frequently Asked Questions</h3>
         <p className="text-gray-600">Have questions? We’re here to help.</p>
       </div>
 
-      {/* FAQ List */}
+     
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className="border-b pb-3">
@@ -103,7 +107,6 @@ const Quest = () => {
         ))}
       </div>
 
-      {/* Contact Form */}
       <div className="mt-10">
         <h3 className="text-xl font-semibold">Still have questions?</h3>
         <p className="text-gray-600 mb-4">

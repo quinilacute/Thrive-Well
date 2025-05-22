@@ -4,14 +4,17 @@ import Trust from "./Trust";
 import Health from "./Health";
 import Meet from "./Meet";
 import Footer from "../components/Footer";
+import our from "../assets/images/our.png"
 
 
 
 
 function Expert() {
     return(
-        <div>
-            <Navbar />
+        <div className="bg-blue-200">
+           <div style={backgrondimage our}>
+           <Navbar />
+           </div>
             <Trust />
             <Health />
             <Meet />

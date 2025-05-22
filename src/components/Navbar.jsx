@@ -1,14 +1,15 @@
 import React, { useState } from "react";  
 import { Link } from "react-router-dom";
-import logo from "../assets/icons/ThriveWell.png";
+import Logo from "../components/Logo";
+import Button from "./Button";
 
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full flex justify-between px-14 py-10  fixed"> 
-       <img src={logo} alt="ThriveWell Logo" className="h-6 w-auto" />
+    <div className="w-full flex justify-between px-14 py-3  fixed"> 
+        <Logo />
       <nav className="text-white flex items-center relative  ">
         
 
@@ -19,6 +20,9 @@ function Navbar() {
           <Link to="/services" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Services</Link>
           <Link to="/expert" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Consultation</Link>
           <Link to="/policy" className="block px-4 py-2 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Policy</Link>
+
+
+          <Link to="/get started"  className="block px-8 py-3 md:px-0 md:py-0 hover:bg-gray-700 hover:text-white md:hover:bg-transparent "><Button>Get started</Button></Link>
         </div>
 
    

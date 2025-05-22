@@ -6,8 +6,7 @@ const Poly = () => {
       <h1 className="text-3xl font-semibold text-center mb-10">Privacy Policy</h1>
 
       <div className="space-y-10">
-        {/* Introduction Section */}
-        <article>
+        <article className="flex justify-center text-center">
           <h2 className="text-2xl font-bold mb-3">Introduction</h2>
           <p className="leading-relaxed">
             Welcome to ThriveWell. Your privacy is important to us. This policy explains how we collect, use, and protect your personal
@@ -15,8 +14,8 @@ const Poly = () => {
           </p>
         </article>
 
-        {/* Information We Collect Section */}
-        <article>
+        
+        <article className="flex justify-center text-center">
           <h3 className="text-xl font-semibold mb-2">Information We Collect</h3>
           <h4 className="font-medium mb-2">We may collect the following types of information:</h4>
           <ul className="list-disc pl-6 space-y-1 leading-relaxed">
@@ -26,8 +25,8 @@ const Poly = () => {
           </ul>
         </article>
 
-        {/* How We Use Your Information Section */}
-        <article>
+       
+        <article className="flex justify-center text-center">
           <h3 className="text-xl font-semibold mb-2">How We Use Your Information</h3>
           <h4 className="font-medium mb-2">We use your information to:</h4>
           <ul className="list-disc pl-6 space-y-1 leading-relaxed">
@@ -38,8 +37,8 @@ const Poly = () => {
           </ul>
         </article>
 
-        {/* Data Protection & Security Section */}
-        <article>
+       
+        <article className="flex justify-center text-center">
           <h3 className="text-xl font-semibold mb-2">Data Protection & Security</h3>
           <ul className="list-disc pl-6 space-y-1 leading-relaxed">
             <li>We implement strict encryption and security measures to protect your data.</li>
@@ -47,8 +46,8 @@ const Poly = () => {
           </ul>
         </article>
 
-        {/* Your Rights & Choices Section */}
-        <article>
+       
+        <article className="flex justify-center text-center">
           <h3 className="text-xl font-semibold mb-2">Your Rights & Choices</h3>
           <h4 className="font-medium mb-2">You have the right to:</h4>
           <ul className="list-disc pl-6 space-y-1 leading-relaxed">
@@ -58,24 +57,24 @@ const Poly = () => {
           </ul>
         </article>
 
-        {/* Cookies & Tracking Section */}
-        <article>
+    
+        <article className="flex justify-center text-center">
           <h3 className="text-xl font-semibold mb-2">Cookies & Tracking</h3>
           <p className="leading-relaxed">
             We use cookies to improve user experience. You can manage cookie settings in your browser.
           </p>
         </article>
 
-        {/* Changes to This Policy Section */}
-        <article>
+     
+        <article className="flex justify-center text-center">
           <h3 className="text-xl font-semibold mb-2">Changes to This Policy</h3>
           <p className="leading-relaxed">
             We may update this policy from time to time. We will notify users of significant changes.
           </p>
         </article>
 
-        {/* Contact Us Section */}
-        <article>
+    
+        <article className="flex justify-center text-center">
           <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
           <p className="leading-relaxed">
             For questions about this policy, contact us at{" "}

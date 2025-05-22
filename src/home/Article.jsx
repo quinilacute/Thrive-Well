@@ -1,6 +1,10 @@
 import React from "react";
 import ArtCard from "./ArtCard";
 import article from "./article.json";
+import card from "../assets/icons/card.png";
+import hum from "../assets/icons/hum.png";
+import rec from "../assets/icons/rec.png";
+"
 
 const Article = () => {
   return (

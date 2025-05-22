@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
+import span from "../assets/icons/span.png";
+import check from "../assets/icons/check.png";
 
 const Core = () => {
   const values = [
@@ -35,31 +37,36 @@ const Core = () => {
 
   return (
     <section className="max-w-5xl mx-auto p-6 text-center">
-      <header className="mb-10">
-        <img
-          src="placeholder-image.png"
-          alt="Core Values Illustration"
-          className="mx-auto mb-4 w-24 h-24 object-contain"
+       <div className="flex flex-col">
+       <img
+          src="span.png"
+          alt="Core V"
+          className=""
         />
-        <h3 className="text-2xl font-semibold mb-2">Core Values</h3>
+        <h3 className="text-2xl font-semibold">Core Values</h3>
+       </div>
+      <header className="mb-10">
+      
         <h2 className="text-3xl font-bold">
           Your Journey to Better Health Starts Here
         </h2>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+      <div className="">
         {values.map((value) => (
           <article
             key={value.id}
-            className="border rounded p-4 flex flex-col items-center text-center"
+            className=" flex flex-col"
           >
             <img
               src={value.image || "placeholder-image.png"}
               alt={value.name}
-              className="w-16 h-16 mb-4 object-contain"
+              className=""
             />
+            <div>
             <h4 className="text-xl font-semibold mb-2">{value.name}</h4>
             <p>{value.description}</p>
+            </div>
           </article>
         ))}
       </div>

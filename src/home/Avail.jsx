@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import first from '../assets/images/firstbg.png';
-
+import MB from "../assets/images/MB.png";
+import GG from "../assets/images/GG.png";
 const Avail = () => {
   const [avail, setAvail] = useState('');
   const [filteredDoctors, setFilteredDoctors] = useState([]);
 
   const doctors = [
-    { id: 1, image: "", name: "Michael Brown", title: "Specialty Doctor" },
+    { id: 1, image: "MB", name: "Michael Brown", title: "Specialty Doctor" },
     { id: 2, image: "", name: "Glory George", title: "Medical Doctor" }
   ];
 
@@ -33,7 +34,7 @@ const Avail = () => {
       <div className="rounded-lg shadow-lg p-6 w-full max-w-xl bg-white/90">
         <h2 className="text-2xl font-bold text-center mb-6">Available Doctors</h2>
 
-        {/* Search Input */}
+       
         <div className="flex items-center border border-gray-300 rounded mb-6 px-3 py-2 bg-white shadow-sm">
           <FiSearch className="text-gray-500 mr-2" />
           <input
@@ -45,7 +46,7 @@ const Avail = () => {
           />
         </div>
 
-        {/* Doctors List */}
+        
         <div className="space-y-4">
           {displayedDoctors.length > 0 ? (
             displayedDoctors.map((doctor) => (

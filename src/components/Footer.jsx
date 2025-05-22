@@ -3,7 +3,7 @@ import face from "../assets/icons/Facebook.png";
 import insta from "../assets/icons/Instagram.png";
 import twit from "../assets/icons/Twitter.png";
 import link from "../assets/icons/Linkedin.png";
-import thrive from "../assets/icons/ThriveWell.png";
+import Logo from "./Logo"
 import send from "../assets/icons/send.png";
 
 const Footer = () => {
@@ -11,13 +11,13 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-10 px-6">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:space-x-10 space-y-10 md:space-y-0">
   
-      {/* Left Section: Logo + text */}
+     
       <div className="w-full md:w-1/3">
-        <img src={thrive} alt="ThriveWell Logo" className="w-32 mb-4" />
+       <Logo />
         <p>We believe healthcare should be fast, accessible, and stress-free.</p>
       </div>
   
-      {/* Center Section: Newsletter */}
+     
       <div className="w-full md:w-1/3">
         <h3 className="text-lg font-semibold mb-3">Subscribe Newsletter</h3>
         <p className="text-sm mb-4">
@@ -42,9 +42,8 @@ const Footer = () => {
 
       </div>
   
-      {/* Right Section: Middle links, always horizontal with 3 equal columns */}
+     
       <div className="w-full md:w-1/3 flex justify-between text-sm text-gray-300">
-        {/* Quick Links */}
         <div className="w-1/3 px-2">
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           <ul className="space-y-2">
@@ -55,7 +54,7 @@ const Footer = () => {
           </ul>
         </div>
   
-        {/* Resources */}
+
         <div className="w-1/3 px-2">
           <h3 className="text-lg font-semibold mb-2">Resources</h3>
           <ul className="space-y-2">
@@ -65,7 +64,7 @@ const Footer = () => {
           </ul>
         </div>
   
-        {/* Company Info */}
+    
         <div className="w-1/3 px-2">
           <h3 className="text-lg font-semibold mb-2">Company Info</h3>
           <ul className="space-y-2">
@@ -79,7 +78,7 @@ const Footer = () => {
       </div>
     </div>
   
-    {/* Bottom Section: Social icons + copyright */}
+ 
     <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 mt-10">
       <div className="flex space-x-4">
         <a href="#" aria-label="Facebook" className="hover:opacity-80 bg-white p-1 rounded">

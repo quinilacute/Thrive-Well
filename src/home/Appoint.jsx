@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
+import appoint from "../assets/Appoint.png";
 
 const Appoint = () => {
   const [name, setName] = useState("");
@@ -23,7 +24,7 @@ const Appoint = () => {
 
   return (
     <div className="bg-blue-600 min-h-screen flex items-start justify-end p-6">
-      {/* Container aligned right with max width and responsive padding */}
+     
       <div className="max-w-sm w-full bg-transparent">
         <h3 className="text-2xl mb-6 text-white">Fix Appointment</h3>
 

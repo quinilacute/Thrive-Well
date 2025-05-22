@@ -23,6 +23,9 @@ const Rights = () => {
           <li>✔️ Opt-out of non-essential data collection and marketing communications.</li>
           <li>✔️ Request a copy of the information we store about you.</li>
         </ul>
+        <div className="mt-6 text-center">
+          <Button>I Disagree</Button>
+        </div>
       </section>
     </div>
   );

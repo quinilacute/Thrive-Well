@@ -2,6 +2,10 @@ import React from "react";
 import Button from "../components/Button";
 import Procard from "./Procard";
 import image4 from "../assets/icons/Kidneys.png";
+import insure from "../assests/icons/insure.png";
+import com from "../assets/icons/com.png";
+import cus from "../assets/icons/cus.png";
+import sub from "../assets/images/sub.png";
 
 const plans = [
   {
@@ -51,6 +55,7 @@ const Pro = () => {
           <Button>Subscribe</Button>
         </div>
       </div>
+      <img src={sub} alt="" />
 
       <div className="flex flex-col items-center">
         <h2 className="py-6 text-center font-semibold text-lg">SUBSCRIPTION PLAN</h2>

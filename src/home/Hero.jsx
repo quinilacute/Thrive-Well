@@ -11,7 +11,7 @@ const Hero = () => {
 
       <div className="bg-white flex flex-col justify-center w-full md:w-1/2 px-6 py-12">
   <div className="mb-6">
-    <Navbar />
+  
   </div>
 
   <div className="space-y-4">

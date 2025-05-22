@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import word from "../assets/icons/word.png";
 import aaron from "../assets/images/mart.png";
-import peter from "../assets/images/mich.png";
-import nkechi from "../assets/images/man.png";
+import lad from "../assets/images/lad.png";
+import wo from "../assets/images/wo.png";
+import shadow from "../assets/images/shadow.png";
 
 const Test = () => {
   const [active, setActive] = useState(0);
@@ -42,7 +43,7 @@ const Test = () => {
           Trusted Worldwide great care giving
         </p>
 
-        {/* Word icon with blue circular background */}
+   
         <div className="bg-blue-600 rounded-full p-4 mt-6">
           <img src={word} alt="word-icon" className="w-10 h-10 sm:w-12 sm:h-12" />
         </div>
@@ -61,7 +62,7 @@ const Test = () => {
             {testi[active].name}
           </h3>
 
-          {/* Avatar cycles with closer spacing */}
+        
           <div className="flex justify-center space-x-3 sm:space-x-4 md:space-x-5">
             {testi.map((test, index) => (
               <div

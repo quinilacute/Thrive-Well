@@ -1,23 +1,32 @@
 import React from "react";
-import Nav from "../components/Navbar";
-import Image4 from '../assets/images/image4.png';
+import Navbar from "../components/Navbar";
+import bg from '../assets/images/secondbg.png';
 
 const First = () => {
   return (
-    <div
-      className="relative h-96 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${Image4})` }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      <Nav />
-
-      <p className="relative z-10 text-white text-center mt-20 text-xl font-semibold">
-        Bridging gaps between patients and doctors.
-      </p>
+    <div className="min-h-screen bg-white flex flex-col px-4 bg-no-repeat bg-cover "  style={{
+            backgroundImage: ` url(${bg})`
+          }}>
+    <div className="flex flex-row items-center justify-between py-6 px-4">
+      <Navbar />
     </div>
+
+   
+<div className="items-center justify-center py-14">
+<p className= "mt-14 text-white text-center text-xl font-semibold">
+      Bridging gaps between patients and doctors.
+    </p>
+
+</div>
+
+
+</div>
   );
 }
 
 export default First;
+
+
+
+
+
