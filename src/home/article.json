@@ -7,31 +7,31 @@
     },
     {
       "id": 2,
-      "image": "dart",
+      "image": "dart.png",
       "name": "Diabetes",
       "description": "Diabetes can feel overwhelming, but small daily habits make a big difference..."
     },
     {
       "id": 3,
-      "image": "",
+      "image": "card.png",
       "name": "Cardiac Arrest",
       "description": "A heart attack can lead to cardiac arrest if untreated. Quick response with CPR and defibrillation can save lives."
     },
     {
       "id": 4,
-      "image": "eart.png",
+      "image": "hum.png",
       "name": "Emergency",
       "description": "Medical emergencies like heart attacks, strokes, and diabetic crises require immediate action..."
     },
     {
       "id": 5,
-      "image": "",
+      "image": "eart.png",
       "name": "Exercise",
       "description": "The best exercises include brisk walking, cycling, swimming, and strength training..."
     },
     {
       "id": 6,
-      "image": "",
+      "image": "recs.png",
       "name": "Nutrition",
       "description": "What you eat directly impacts your risk for diseases like diabetes and hypertension..."
     }

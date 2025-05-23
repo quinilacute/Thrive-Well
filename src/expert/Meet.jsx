@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../components/Button";
-import doc1 from "../assets/images/doc1";
-import doc from "../assets/images/doc";
-import doc2 from "../assets/images/doc2";
-import doc3 from "../assets/images/doc3";
+import doc1 from "../assets/images/doc1.png";
+import doc from "../assets/images/doc.png";
+import doc2 from "../assets/images/doc2.png";
+import doc3 from "../assets/images/doc3.png";
 
 
 const Meet = () => {
@@ -24,6 +24,13 @@ const Meet = () => {
                 </p>
             </div>
             <Button>Contact Us</Button>
+
+            <div>
+                <img src={doc} alt="" />
+                <img src={doc1} alt="" />
+                <img src={doc2} alt="" />
+                <img src={doc3} alt="" />
+            </div>
         </section>
     );
 }

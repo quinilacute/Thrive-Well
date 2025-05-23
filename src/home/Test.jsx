@@ -6,7 +6,7 @@ import wo from "../assets/images/wo.png";
 import shadow from "../assets/images/shadow.png";
 
 const Test = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1); // Initially no testimonial is selected
 
   const handleClick = (index) => {
     setActive(index);
@@ -22,13 +22,13 @@ const Test = () => {
     {
       id: 2,
       name: "Peter Emem",
-      image: peter,
+      image: lad,
       test: "ThriveWell has completely changed how I manage my diabetes! The meal plans and health tracking tools keep me on track every day.",
     },
     {
       id: 3,
       name: "Nkechi Esosa",
-      image: nkechi,
+      image: wo,
       test: "ThriveWell has completely changed how I manage my diabetes! The meal plans and health tracking tools keep me on track every day.",
     },
   ];
@@ -43,7 +43,6 @@ const Test = () => {
           Trusted Worldwide great care giving
         </p>
 
-   
         <div className="bg-blue-600 rounded-full p-4 mt-6">
           <img src={word} alt="word-icon" className="w-10 h-10 sm:w-12 sm:h-12" />
         </div>
@@ -54,16 +53,33 @@ const Test = () => {
           What Our Customers Are Saying...
         </h2>
 
-        <div className="flex flex-col items-center max-w-xl mx-auto">
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6">
-            {testi[active].test}
-          </p>
-          <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-6">
-            {testi[active].name}
-          </h3>
+        {/* Overlay + Testimonial section */}
+        <div className="relative flex flex-col items-center max-w-xl mx-auto">
+          {/* Shadow overlay (visible only when no active testimonial is selected) */}
+          {active === -1 && (
+            <img
+              src={shadow}
+              alt="shadow overlay"
+              className="absolute top-0 left-0 w-full h-full object-cover opacity-60 z-10 rounded-lg"
+            />
+          )}
 
-        
-          <div className="flex justify-center space-x-3 sm:space-x-4 md:space-x-5">
+          {/* Testimonial Content */}
+          <div className="relative z-20 text-center p-4">
+            {active !== -1 && (
+              <>
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6">
+                  {testi[active].test}
+                </p>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-6">
+                  {testi[active].name}
+                </h3>
+              </>
+            )}
+          </div>
+
+          {/* Clickable thumbnails */}
+          <div className="flex justify-center space-x-3 sm:space-x-4 md:space-x-5 relative z-20">
             {testi.map((test, index) => (
               <div
                 key={test.id}

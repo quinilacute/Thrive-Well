@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
-import appoint from "../assets/Appoint.png";
+import appoint from "../assets/images/appoint.png";
 
 const Appoint = () => {
   const [name, setName] = useState("");

@@ -1,14 +1,12 @@
 import React from "react";
 import Container from "../home/Procard";
-import Icon from "../assets/icons/book.png"; 
-import Placeholder from "../assets/icons/love.png"; 
 import edu from "../assets/icons/edu.png";
 
 const Why = () => {
   const benefits = [
     {
       id: 1,
-      image: Placeholder,
+      image: edu,
       name: "Wellness & Fitness Programs",
       description:
         "Wellness & Fitness Programs Stress management and mental wellness tools",
@@ -16,7 +14,7 @@ const Why = () => {
     },
     {
       id: 2,
-      image: Placeholder,
+      image: edu,
       name: "Stress management and mental wellness tools",
       description:
         "Quick-access emergency response guide Hotline for urgent medical questions",
@@ -24,7 +22,7 @@ const Why = () => {
     },
     {
       id: 3,
-      image: Placeholder,
+      image: edu,
       name: "Educational Resources",
       description:
         "Symptom and health tracking (e.g., blood sugar, blood pressure)",
@@ -40,7 +38,7 @@ const Why = () => {
 
       <div className="flex flex-col md:flex-row md:justify-around px-2 py-14 gap-8">
         <article className="flex flex-col  text-center w-80 bg-blue-800 p-5 ">
-          <img src={Icon} alt="Personalized Health Management Icon" className="mb-4 w-16 h-16" />
+          <img src={edu} alt="Personalized Health Management Icon" className="mb-4 w-16 h-16" />
           <h3 className="text-xl font-bold mb-2">Personalized Health Management</h3>
           <p>Symptom and health tracking (e.g., blood sugar, blood pressure)</p>
           <p className="mt-2 text-blue-600 font-medium cursor-pointer hover:underline">
@@ -49,7 +47,7 @@ const Why = () => {
         </article>
 
         <article className="flex flex-col  text-center w-80 bg-blue-800 p-5">
-          <img src={Icon} alt="Educational Resources Icon" className="mb-4 w-16 h-16" />
+          <img src={edu} alt="Educational Resources Icon" className="mb-4 w-16 h-16" />
           <h3 className="text-xl font-bold mb-2">Educational Resources & Expert Insights</h3>
           <p>Articles, guides, and videos on diabetes and hypertension</p>
           <p className="mt-2 text-blue-600 font-medium cursor-pointer hover:underline">

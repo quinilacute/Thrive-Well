@@ -12,7 +12,7 @@ import our from "../assets/images/our.png"
 function Expert() {
     return(
         <div className="bg-blue-200">
-           <div style={backgrondimage our}>
+           <div style={{backgroundImage: `{${our}}`}}>
            <Navbar />
            </div>
             <Trust />

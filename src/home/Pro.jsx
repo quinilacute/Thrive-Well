@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "../components/Button";
 import Procard from "./Procard";
-import image4 from "../assets/icons/Kidneys.png";
-import insure from "../assests/icons/insure.png";
+import image4 from "../assets/icons/dart.png";
+import insure from "../assets/icons/insure.png";
 import com from "../assets/icons/com.png";
 import cus from "../assets/icons/cus.png";
 import sub from "../assets/images/sub.png";
@@ -26,9 +26,15 @@ const plans = [
 ];
 
 const services = [
-  "Custom Nutrition Plan",
-  "Community Support & Forum",
-  "Insurance HMO"
+  {des: "Custom Nutrition Plan", 
+    image: insure
+  },
+  {des: "Community Support & Forum",
+    image: com
+  },
+ {des:  "Insurance HMO",
+  image: cus
+ }
 ];
 
 const Pro = () => {
@@ -45,8 +51,8 @@ const Pro = () => {
         <div className="grid gap-4">
           {services.map((service, idx) => (
             <div key={idx} className="flex items-center space-x-4 px-10">
-              <img src={image4} alt={service} className="w-4 h-4" />
-              <p className="text-gray-700 font-medium">{service}</p>
+              <img src={services.image} alt={service} className="w-4 h-4" />
+              <p className="text-gray-700 font-medium">{service.des}</p>
             </div>
           ))}
         </div>
