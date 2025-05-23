@@ -3,7 +3,7 @@ import face from "../assets/icons/Facebook.png";
 import insta from "../assets/icons/Instagram.png";
 import twit from "../assets/icons/Twitter.png";
 import link from "../assets/icons/Linkedin.png";
-import Logo from "./Logo"
+import Logo from "../assets/icons/ThriveWell.png";
 import send from "../assets/icons/send.png";
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
   
      
       <div className="w-full md:w-1/3">
-       <Logo />
+        <img src={Logo} alt="ThriveWell logo" className="w-24 h-auto" />
         <p>We believe healthcare should be fast, accessible, and stress-free.</p>
       </div>
   

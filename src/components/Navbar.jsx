@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/icons/Thrivewell.png"; 
+import Logo from "../assets/icons/ThriveWell.png"; 
 import Button from "./Button";
 
 function Navbar() {
