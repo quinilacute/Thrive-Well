@@ -1,7 +1,7 @@
 import React from "react";
-import ph from "../assets/images/ph.png";
-import ph1 from "../assets/images/ph.png";
-import ph2 from "../assets/images/ph.png";
+import ph from "../public/assets/images/ph.png";
+import ph1 from "../public/assets/images/ph.png";
+import ph2 from "../public/assets/images/ph.png";
 
 const App = () => {
   return (

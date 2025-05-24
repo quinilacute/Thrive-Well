@@ -8,8 +8,8 @@ const Avail = () => {
   const [filteredDoctors, setFilteredDoctors] = useState([]);
 
   const doctors = [
-    { id: 1, image: "MB", name: "Michael Brown", title: "Specialty Doctor" },
-    { id: 2, image: "", name: "Glory George", title: "Medical Doctor" }
+    { id: 1, image: MB, name: "Michael Brown", title: "Specialty Doctor" },
+    { id: 2, image: GG, name: "Glory George", title: "Medical Doctor" }
   ];
 
   const handleSearch = (e) => {
@@ -26,25 +26,16 @@ const Avail = () => {
 
   return (
     <div
-      className="w-full md:w-1/2 bg-cover bg-no-repeat bg-center flex items-center justify-center px-4 py-12"
+      className="w-full md:w-1/2 bg-cover bg-no-repeat bg-center flex items-center justify-center px-4 py-9"
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url(${first})`,
+        backgroundImage: `url(${first})`,
       }}
     >
-      <div className="rounded-lg shadow-lg p-6 w-full max-w-xl bg-white/90">
-        <h2 className="text-2xl font-bold text-center mb-6">Available Doctors</h2>
+      <div className="rounded-lg shadow-lg p-6 w-60 max-w-xl bg-white/90 px-14 ">
+        <h2 className="text-1xl font-bold text-center mb-6">Available Doctors</h2>
 
        
-        <div className="flex items-center border border-gray-300 rounded mb-6 px-3 py-2 bg-white shadow-sm">
-          <FiSearch className="text-gray-500 mr-2" />
-          <input
-            type="search"
-            value={avail}
-            onChange={handleSearch}
-            placeholder="Search available doctor"
-            className="outline-none w-full text-sm"
-          />
-        </div>
+       
 
         
         <div className="space-y-4">
@@ -52,12 +43,12 @@ const Avail = () => {
             displayedDoctors.map((doctor) => (
               <div
                 key={doctor.id}
-                className="flex items-center space-x-4 border-b border-gray-200 pb-4"
+                className="flex items-center space-x-2 border-b border-gray-200 pb-2"
               >
                 <img
-                  src={doctor.image || "https://via.placeholder.com/100?text=Dr"}
+                  src={doctor.image }
                   alt={doctor.name}
-                  className="w-16 h-16 rounded-full object-cover bg-gray-100"
+                  className="w-8 h-8 rounded-full object-cover bg-gray-100"
                 />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">{doctor.name}</h3>
@@ -68,6 +59,18 @@ const Avail = () => {
           ) : (
             <p className="text-gray-500 text-sm text-center">No matching doctors found.</p>
           )}
+        </div>
+
+
+        <div className="flex items-center border border-gray-300 rounded mb-6 px-3 py-2 bg-white shadow-sm">
+          <FiSearch className="text-gray-500 mr-2" />
+          <input
+            type="search"
+            value={avail}
+            onChange={handleSearch}
+            placeholder="Search available doctor"
+            className="outline-none w-full text-sm"
+          />
         </div>
       </div>
     </div>

@@ -17,10 +17,10 @@ const Hero = () => {
   <div className="space-y-4">
     <p className="text-lg text-gray-600">We are here for you</p>
 
-    <h2 className="text-4xl font-bold text-black leading-tight">
+    <h2 className="text-l font-bold text-black leading-tight space-y-6">
       Empower people living<br />
       with chronic illness<br />
-      to thrive and live better
+      to thrive
     </h2>
 
     <p className="text-md text-gray-700">
